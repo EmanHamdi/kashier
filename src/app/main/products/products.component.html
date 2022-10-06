@@ -1,0 +1,40 @@
+<div class="container main mb-4">
+  <div class="row">
+    <div class="col-md-6">
+      <div ngbDropdown class="h-100 w-100">
+        <button type="button" class="btn btn-outline-primary w-100 form-control" id="dropdownBasic1" ngbDropdownToggle>
+          {{ selectedValue ? selectedValue : 'select or add new product' }}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <ul>
+            <!-- search -->
+            <li>
+              <input type="text" class="w-100 searchInput" placeholder="Search products" [(ngModel)]="searchText" autofocus/>
+              <i class="fa fa-search field-icon" aria-hidden="true"></i>
+            </li>
+            <!-- add new product -->
+            <li class="mt-1">
+            <a [routerLink]="'/create'">
+            <span>
+              <i class="fa fa-plus" aria-hidden="true"></i>
+              Add new product
+            </span>
+          </a>
+            </li>
+          </ul>
+          <hr>
+          <!-- products -->
+          <a *ngFor="let item of allProducts | appFilter: searchText; let i = index" class="dropdown-item pointer text-contain"
+            [ngClass]="{ alternateBackground: i % 2 == 0 }" [routerLink]="['/edit', item.id]"
+            (click)="selectValue(item.name)">
+            {{ item.name }}
+          </a>
+          <div *ngIf="allProducts.length <= 0" class="text-center text-muted mt-1">
+            No expert found
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

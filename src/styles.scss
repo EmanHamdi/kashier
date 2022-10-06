@@ -1,0 +1,125 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import './variable.scss';
+body {
+  background-color: #F6F7FB;
+}
+
+.float-left{
+  float: left;
+}
+
+.w-100{
+width: 98.5%!important;
+}
+
+form {
+  width: fit-content;
+}
+
+label {
+  color: $main-color;
+  span{
+    color:$second-color
+  }
+}
+
+.container {
+  // padding-top: 50px;
+  margin: auto;
+  padding-bottom: 50px;
+  .field-icon {
+    float: right;
+    margin-top: -28px;
+    position: relative;
+    z-index: 2;
+    color: $second-color;
+    padding: inherit;
+  }
+}
+
+ul {
+  padding: 0;
+  li {
+    list-style-type: none;
+    padding: var(--bs-dropdown-item-padding-y) 0.5rem;
+    width: 100%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $main-color;
+  height: 38px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $main-color;
+}
+
+.form-check-input:checked {
+  background-color: $btn-color;
+  border-color: $btn-color;
+  cursor: pointer;
+}
+
+.cancelbtn {
+  color: $second-color;
+}
+
+.btn-primary {
+  background-color: $btn-color;
+  border-color: $btn-color;
+}
+
+:not(.btn-check) + .btn-primary:hover, .btn-primary:first-child:hover {
+  background-color: $btn-color;
+  border-color: $btn-color;
+  border: $btn-color;
+}
+
+.input-group-text {
+  border-radius: unset;
+  background-color: $white-color;
+}
+
+.modal-header, .border-top{
+  border-bottom:unset;
+}
+
+.toast-container .ngx-toastr {
+  color: $main-color!important;
+  background-color: $white-color;
+}
+
+.toast-close-button {
+  color: $main-color!important;
+}
+
+@media (max-width: 600px) {
+  .w-100 {
+    width: 100%!important;
+}
+  .toast-bottom-center {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+  }
+}

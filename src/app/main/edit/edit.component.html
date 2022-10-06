@@ -1,0 +1,114 @@
+<div class="container">
+  <form>
+    <!-- Product Name -->
+    <div class="row">
+      <div class="col mb-4">
+        <label for="txtName" class="form-label">Product Name</label>
+        <input type="text" name="name" [(ngModel)]="productsForm.name" class="form-control" id="txtName"
+          placeholder="Name" />
+      </div>
+    </div>
+    <!-- Product Type -->
+    <div class="mb-4">
+      <label for="txtName" class="form-label d-block">Product Type</label>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" [(ngModel)]="productsForm.type"
+          id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">Type 1</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" [(ngModel)]="productsForm.type"
+          id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">Type 2</label>
+      </div>
+    </div>
+    <!-- Product Category -->
+    <div class="row">
+      <div class="col mb-4">
+        <label for="category" class="form-label">Product Category</label>
+        <input type="text" name="category" [(ngModel)]="productsForm.category" class="form-control"
+          placeholder="Category" id="txtPrice" />
+      </div>
+    </div>
+    <!-- supCategory -->
+    <div class="row">
+      <div class="col mb-4">
+        <div class="form-check">
+          <input type="checkbox" name="supCategory" [(ngModel)]="productsForm.supCategory" class="form-check-input"
+            id="supCategory">
+          <label class="form-check-label" for="supCategory">This is a sup category</label>
+        </div>
+
+      </div>
+    </div>
+    <div class="row mb-4">
+      <!-- Refrence ID -->
+      <div class="col-sm-12 col-md-6">
+        <label for="refrenceId" class="form-label">Refrence ID <span>(Optional)</span></label>
+        <input type="number" name="refrenceId" [(ngModel)]="productsForm.refrenceId" class="form-control"
+          id="txtQuantity" />
+      </div>
+      <!-- Password -->
+      <div class="col-sm-12 col-md-6">
+        <label for="Password" class="form-label">Password</label>
+        <input id="password-field" [(ngModel)]="productsForm.pass" [type]="fieldTextType ? 'text' : 'password'"
+          class="form-control" placeholder="Password" name="password" value="secret">
+        <i class="fa field-icon toggle-password" [ngClass]="{
+          'fa-eye-slash': !fieldTextType,
+          'fa-eye': fieldTextType
+        }" (click)="toggleFieldTextType()"></i>
+      </div>
+    </div>
+    <div class="row mb-4">
+      <!-- Delivery fees -->
+      <div class="col-sm-12 col-md-6">
+        <label for="fees" class="form-label">Delivery fees</label>
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">EGP</div>
+          </div>
+          <input type="text" name="deliveryFees" [(ngModel)]="productsForm.deliveryFees" class="form-control"
+            id="deliveryFees" placeholder="Delivery fees">
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <label for="fees" class="form-label">Delivery fees</label>
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">%</div>
+          </div>
+          <input type="number" name="deliveryFeesPercentage" [(ngModel)]="productsForm.deliveryFeesPercentage"
+            class="form-control" id="deliveryFeesPercentage" placeholder="Delivery fees">
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="text-end">
+        <button type="button" (click)="openDeleteModal(this.productsForm.id)"
+        class="btn text-danger float-left">Delete</button>
+        <button type="button" (click)="cancel()" class="btn text-muted">Cancel</button>
+        <button type="button" (click)="update()" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete "{{productsForm.name}}"?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete product? Once deleted, you
+        won't be able to access it again
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" data-bs-dismiss="modal">Discard</button>
+        <button type="button" class="btn btn-danger" (click)="delete()">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

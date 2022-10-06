@@ -1,0 +1,65 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "product 1",
+      "category": "typicode",
+      "supCategory": true,
+      "refrenceId": 1,
+      "pass": "pass123",
+      "deliveryFees": 10,
+      "deliveryFeesPercentage": 1.5
+    },
+    {
+      "id": 2,
+      "name": "product 2",
+      "category": "smartphones",
+      "supCategory": false,
+      "refrenceId": 2,
+      "pass": "pass678",
+      "deliveryFees": 20,
+      "deliveryFeesPercentage": 2.5
+    },
+    {
+      "id": 3,
+      "name": "product 3",
+      "category": "smartphones",
+      "supCategory": true,
+      "refrenceId": 3,
+      "pass": "pass198",
+      "deliveryFees": 30,
+      "deliveryFeesPercentage": 3.5
+    },
+    {
+      "id": 4,
+      "name": "product 4",
+      "category": "laptops",
+      "supCategory": false,
+      "refrenceId": 4,
+      "pass": "password",
+      "deliveryFees": 40,
+      "deliveryFeesPercentage": 4.5
+    },
+    {
+      "id": 5,
+      "name": "product 5",
+      "category": "fragrances",
+      "supCategory": true,
+      "refrenceId": 5,
+      "pass": "pass876",
+      "deliveryFees": 50,
+      "deliveryFeesPercentage": 5.5
+    },
+    {
+      "id": 6,
+      "name": "new product 6",
+      "type": "option2",
+      "category": "new product 6",
+      "supCategory": true,
+      "refrenceId": 10,
+      "pass": "qwertyuiop",
+      "deliveryFees": "3",
+      "deliveryFeesPercentage": 4
+    }
+  ]
+}
