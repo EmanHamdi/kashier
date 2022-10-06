@@ -45,11 +45,11 @@
       "name": "product 5",
       "category": "fragrances",
       "supCategory": true,
-      "refrenceId": 34,
+      "refrenceId": 3,
       "pass": "pass876",
       "deliveryFees": 50,
       "deliveryFeesPercentage": 5.5,
-      "type": "option2"
+      "type": "option1"
     },
     {
       "id": 6,
@@ -58,9 +58,9 @@
       "category": "new product 6",
       "supCategory": true,
       "refrenceId": 3,
-      "pass": "asdfghj",
-      "deliveryFees": "3",
-      "deliveryFeesPercentage": 34
+      "pass": "asdfgyhjkl",
+      "deliveryFees": "4",
+      "deliveryFeesPercentage": 4
     }
   ]
 }
